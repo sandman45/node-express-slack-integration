@@ -30,7 +30,7 @@ app.get('/sub/:groupId', async (req, res) => {
 });
 
 function validateSlackRequest(body, headers) {
-    const signingSecret = process.env.SLACK_EDCONNECT_SIGNING_SECRET;
+    const signingSecret = process.env.SLACK_SIGNING_SECRET;
     const timestamp = headers['x-slack-request-timestamp'];
     const incomingSignature = headers['x-slack-signature'];
     const version = "v0";

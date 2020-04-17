@@ -11,7 +11,7 @@ module.exports.dynamoDb = null;
 module.exports.init = () => {
     AwsUtil.config.update({
         accessKeyId: process.env.AWS_ACCESS_KEY,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_SECRET,
+        secretAccessKey: process.env.AWS_ACCESS_SECRET,
         region: 'us-west-2',
     });
 
@@ -26,7 +26,7 @@ module.exports.getDynamo = () => {
     if (module.exports.dynamoDb === undefined || module.exports.dynamoDb === null) {
         AwsUtil.config.update({
             accessKeyId: process.env.AWS_ACCESS_KEY,
-            secretAccessKey: process.env.AWS_SECRET_ACCESS_SECRET,
+            secretAccessKey: process.env.AWS_ACCESS_SECRET,
             region: 'us-west-2',
         });
         module.exports.dynamoDb = new AwsUtil.DynamoDB.DocumentClient();
@@ -42,7 +42,7 @@ module.exports.getS3 = () => {
     if (module.exports.s3 === undefined || module.exports.s3 === null) {
         AwsUtil.config.update({
             accessKeyId: process.env.AWS_ACCESS_KEY,
-            secretAccessKey: process.env.AWS_SECRET_ACCESS_SECRET,
+            secretAccessKey: process.env.AWS_ACCESS_SECRET,
             region: 'us-west-2',
         });
         module.exports.s3 = new AwsUtil.S3();
