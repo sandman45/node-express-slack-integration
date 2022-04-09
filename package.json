@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "helmet": "^3.22.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "qs": "^6.9.3",
     "querystring": "^0.2.0"
   }
